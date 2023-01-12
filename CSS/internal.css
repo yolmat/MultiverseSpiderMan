@@ -1,5 +1,5 @@
 @import url('./reset.css');
-
+@import url('./global.css');
 .s-wrapper {
     display: flex;
     height: 100vh;
@@ -34,4 +34,46 @@
 
 .navegator ul li {
     margin: 10vh 0;
+}
+.navegator ul li:first-child {
+    margin-top: 0;
+}
+.navegator ul li:last-child {
+    margin-bottom: 0;
+}
+
+.navegator li a {
+    color: #fff;
+    border: solid 2px #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 0;
+}
+
+.navegator ul {
+    z-index: 1;
+}
+
+.navegator ul li a:hover, .navegator ul li a:active {
+    color: var(--primary-color);
+    background-color: #fff;
+}
+
+.navegator .navegator__icon {
+    position: absolute;
+    top: -20px
 }
