@@ -72,6 +72,8 @@
     margin-top: 10px;
 }
 
+/* background Tobey */
+
 .s-spiderman-01-01 {
     background-image: url('../assets/images/spiderman-tobey/movie-01/background.png');
     background-size: cover;
@@ -84,5 +86,17 @@
 
 .s-spiderman-01-03 {
     background-image: url('../assets/images/spiderman-tobey/movie-03/background.png');
+    background-size: cover;
+}
+
+/* background Andrew */
+
+.s-spiderman-02-01 {
+    background-image: url('../assets/images/spiderman-andrew/movie-01/background.png');
+    background-size: cover;
+}
+
+.s-spiderman-02-02 {
+    background-image: url('../assets/images/spiderman-andrew/movie-02/background.jpg');
     background-size: cover;
 }
