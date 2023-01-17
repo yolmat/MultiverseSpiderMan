@@ -47,7 +47,7 @@
 
 .s-wrapper .s-main-content__top .s-logo img {
     margin: 30px 0 30px 0;
-    width: 50%;
+    width: 30%;
 }
 
 .s-description {
@@ -98,5 +98,22 @@
 
 .s-spiderman-02-02 {
     background-image: url('../assets/images/spiderman-andrew/movie-02/background.jpg');
+    background-size: cover;
+}
+
+/* background Tom */
+
+.s-spiderman-03-01 {
+    background-image: url('../assets/images/spiderman-tom/movie-01/background.png');
+    background-size: cover;
+}
+
+.s-spiderman-03-02 {
+    background-image: url('../assets/images/spiderman-tom/movie-02/background.png');
+    background-size: cover;
+}
+
+.s-spiderman-03-03 {
+    background-image: url('../assets/images/spiderman-tom/movie-03/background.png');
     background-size: cover;
 }
