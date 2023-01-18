@@ -41,15 +41,37 @@ body::before {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;   
+    justify-content: space-evenly;
+    perspective: 8000px;
+    max-height: 70vh;
+}
+
+.s-card-carousel {
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    width: calc(100vw / 3 - 10%);
+    transition: transform 0.4s ease-in-out;
 }
 
 .s-card {
-    border: 0.5rem solid #FFFFFF;
-    width: calc(100% / 3 - 8%);
+    border: 0.5rem solid #fff;
+    width: 100%;
     height: 70vh;
-    position: relative;
     transition: filter .25s ease-in-out;
+    position: absolute;
+}
+
+.s-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50vw);
+}
+
+.s-card:nth-child(2) {
+    transform: rotateY(120deg) translateZ(50vw);
+}
+
+.s-card:nth-child(3) {
+    transform: rotateY(240deg) translateZ(50vw);
 }
 
 .s-card__background {
@@ -80,11 +102,13 @@ body::before {
 }
 
 .s-controller {
-    position: relative;
+    position: absolute;
+    bottom: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+    width: 100%;
 }
 
 .s-controller__button {
@@ -93,7 +117,7 @@ body::before {
     justify-content: center;
     width: 2.5rem;
     height: 2.5rem;
-    border: 2px solid #ffffff;
+    border: 2px solid #fff;
     border-radius: 50%;
     background-color: var(--primary-color);
     text-align: center;
@@ -112,8 +136,15 @@ body::before {
     transform: scale(1.1);
 }
 
+.s-controller__button--active {
+    background-color: #fff;
+    color: var(--primary-color);
+    border: 0.1075rem solid var(--primary-color);
+    outline: 0.125rem solid #fff;
+}
+
 .s-controller__line {
-    background-color: #ffffff;
+    background-color: #fff;
     width: 50%;
     height: 2px;
     position: absolute;
